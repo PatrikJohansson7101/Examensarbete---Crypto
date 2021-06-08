@@ -1,6 +1,6 @@
 {
-  "name": "firebase-react-auth",
-  "version": "0.1.0",
+  "name": "cryptotracker",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -24,7 +24,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "no-unused-vars": 0
+    }
   },
   "browserslist": {
     "production": [
