@@ -1,0 +1,9 @@
+.cancel-link {
+  color: $input-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $input-white-hover;
+    text-decoration: underline;
+  }
+}

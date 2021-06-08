@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from "../../contexts/AuthContext"
 import { Link } from "react-router-dom"
 
 export default function ForgotPassword() {
@@ -42,13 +42,13 @@ export default function ForgotPassword() {
               Reset Password
             </Button>
           </Form>
-          <div className="w-100 text-center mt-3">
+          <div className="w-100 text-center mt-3 login-forget">
             <Link to="/login">Login</Link>
           </div>
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+        <span class="ordinary-white-text">Need an account?</span> <Link to="/signup">Sign Up</Link>
       </div>
     </>
   )

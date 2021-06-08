@@ -1,0 +1,48 @@
+.reactstrap-header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  color: $input-white;
+  top: 0;
+  text-align: right;
+
+  .navbar-brand {
+    color: $input-white;
+
+    &:hover {
+      color: $input-white-hover;
+    }
+  }
+}
+
+.header-logout {
+  color: $input-white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $input-white-hover;
+  }
+
+  &:visited {
+    color: $input-white;
+  }
+
+  &:focus {
+    color: $input-white-hover;
+  }
+}
+
+.reactstrap-header-right {
+  flex-direction: row;
+  margin-left: auto;
+
+  .nav-link {
+    color: $input-white !important;
+
+    &:hover {
+      color: $input-white-hover;
+      text-decoration: underline;
+    }
+  }
+}

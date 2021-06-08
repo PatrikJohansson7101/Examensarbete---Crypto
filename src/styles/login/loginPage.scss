@@ -1,0 +1,26 @@
+.card-body {
+  .text-center {
+    h2 {
+      color: $black;
+    }
+
+    a {
+      color: $black !important;
+    }
+  }
+}
+
+.text-center {
+  a {
+    color: $input-white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $input-white-hover;
+    }
+  }
+}
+
+.ordinary-white-text {
+  color: $input-white;
+}
