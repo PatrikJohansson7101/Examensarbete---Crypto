@@ -1,29 +1,29 @@
-import React, { useRef, useState } from "react"
-import { Form, Button, Card, Alert } from "react-bootstrap"
-import { useAuth } from "../../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import React, { useRef, useState } from 'react';
+import { Form, Button, Card, Alert } from 'react-bootstrap';
+import { useAuth } from '../../contexts/AuthContext';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Login() {
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const { login } = useAuth()
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
-  const history = useHistory()
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const { login } = useAuth();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   async function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      setError("")
-      setLoading(true)
-      await login(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
+      setError('');
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      history.push('/');
     } catch {
-      setError("Failed to log in")
+      setError('Failed to log in');
     }
 
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
@@ -33,11 +33,21 @@ export default function Login() {
           <h2 className="text-center mb-4">Log In</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">              
-              <Form.Control type="email" ref={emailRef} placeholder="Email" required />
+            <Form.Group id="email">
+              <Form.Control
+                type="email"
+                ref={emailRef}
+                placeholder="Email"
+                required
+              />
             </Form.Group>
-            <Form.Group id="password">              
-              <Form.Control type="password" ref={passwordRef} placeholder="Password" required />
+            <Form.Group id="password">
+              <Form.Control
+                type="password"
+                ref={passwordRef}
+                placeholder="Password"
+                required
+              />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
               Log In
@@ -47,11 +57,10 @@ export default function Login() {
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
           <div className="w-100 text-center mt-2">
-        <Link to="/signup">Sign up</Link>
-      </div>
+            <Link to="/signup">Sign up</Link>
+          </div>
         </Card.Body>
       </Card>
-      
     </>
-  )
+  );
 }
